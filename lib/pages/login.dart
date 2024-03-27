@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
+import 'admin.dart';
 
 
 class Login extends StatefulWidget {
@@ -14,28 +16,20 @@ class _MainActivity2State extends State<Login> {
     final username = _usernameController.text;
     final password = _passwordController.text;
 
-    if (_isValidLogin(username, password)) {
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Login Confirmation"),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  Navigator.pushReplacementNamed(context, '/role');
-                },
-                child: Text('Correct'),
-              ),
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: Text('Wrong'),
-              ),
-            ],
-          );
-        },
-      );
+    // Check if the entered username is 'admin'
+    if (username == 'admin' && password == 'admin' && _isValidLogin(username, password)) {
+      // Navigate to the Admin screen
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Admin(),
+      ),);
+    } else if (_isValidLogin(username, password)) {
+      // For other users, you can define your navigation logic here
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage(),
+      ),);
+
     } else {
       _showToast('Invalid username or password!');
     }
@@ -66,33 +60,35 @@ class _MainActivity2State extends State<Login> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'LOGIN',
+                Text(
+                'LOG IN',
+                style: TextStyle(
+                  fontSize: 36.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 20.0),
+              Text(
+                'Dont have an account?',
+                style: TextStyle(
+                  fontSize: 13.0,
+                  color: Colors.black,
+                ),
+              ),
+              InkWell(
+                child: TextButton(
+                  onPressed: () => Navigator.pushReplacementNamed(context, '/signup'),
+                  child: Text(
+                    'SIGN UP',
                     style: TextStyle(
-                      fontSize: 36,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
                     ),
                   ),
+                ),
+              ),
                   SizedBox(height: 20),
-                  Text(
-                    'Don\'t have an Account?',
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: Colors.black,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () => Navigator.pushReplacementNamed(context, '/signup'),
-                    child: Text(
-                      'SIGN UP',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 40),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
@@ -130,6 +126,7 @@ class _MainActivity2State extends State<Login> {
                         ElevatedButton(
                           onPressed: _login,
                           child: Text('LOGIN',style: TextStyle(color: Colors.black),),
+
                         ),
                       ],
                     ),
@@ -144,7 +141,7 @@ class _MainActivity2State extends State<Login> {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
+
                       ),
                     ),
                   ),

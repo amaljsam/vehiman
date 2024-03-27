@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,39 +49,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCh6lfdG6K_l-_oo_cWvgZuc5ynjp-Gnw4',
-    appId: '1:761357065237:web:c68653d8d5d6c1de06421c',
-    messagingSenderId: '761357065237',
-    projectId: 'vehiman-e0ab0',
-    authDomain: 'vehiman-e0ab0.firebaseapp.com',
-    storageBucket: 'vehiman-e0ab0.appspot.com',
-    measurementId: 'G-NS9VGT239S',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBuxzbuV5HWBP5TVnawdQg_Kuf2WwuDwck',
-    appId: '1:761357065237:android:b91dc62d0429fd7906421c',
-    messagingSenderId: '761357065237',
-    projectId: 'vehiman-e0ab0',
-    storageBucket: 'vehiman-e0ab0.appspot.com',
+    apiKey: 'AIzaSyCL6OyvMyitSTtdtEsFwGQMmwIxKZ8pnf0',
+    appId: '1:427147421588:android:4c166136d9b9745e17d181',
+    messagingSenderId: '427147421588',
+    projectId: 'mini-project-b90fd',
+    storageBucket: 'mini-project-b90fd.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAh06jvPNnjVS9bY1uE7rF4qOp_RXinyEs',
-    appId: '1:761357065237:ios:18d69605b73d37a606421c',
-    messagingSenderId: '761357065237',
-    projectId: 'vehiman-e0ab0',
-    storageBucket: 'vehiman-e0ab0.appspot.com',
+    apiKey: 'AIzaSyCmU5672aEdFyby_zeui-068V0Q0SyVT2g',
+    appId: '1:427147421588:ios:90247984241937a717d181',
+    messagingSenderId: '427147421588',
+    projectId: 'mini-project-b90fd',
+    storageBucket: 'mini-project-b90fd.appspot.com',
     iosBundleId: 'com.example.vehiman',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAh06jvPNnjVS9bY1uE7rF4qOp_RXinyEs',
-    appId: '1:761357065237:ios:fbcda99cf9f147fb06421c',
-    messagingSenderId: '761357065237',
-    projectId: 'vehiman-e0ab0',
-    storageBucket: 'vehiman-e0ab0.appspot.com',
-    iosBundleId: 'com.example.vehiman.RunnerTests',
   );
 }

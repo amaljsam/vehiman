@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "761357065237",
-    "project_id": "vehiman-e0ab0",
-    "storage_bucket": "vehiman-e0ab0.appspot.com"
+    "project_number": "427147421588",
+    "project_id": "mini-project-b90fd",
+    "storage_bucket": "mini-project-b90fd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:761357065237:android:b91dc62d0429fd7906421c",
+        "mobilesdk_app_id": "1:427147421588:android:9a485fa67571745117d181",
+        "android_client_info": {
+          "package_name": "com.example.vehicle_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL6OyvMyitSTtdtEsFwGQMmwIxKZ8pnf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427147421588:android:4c166136d9b9745e17d181",
         "android_client_info": {
           "package_name": "com.example.vehiman"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBuxzbuV5HWBP5TVnawdQg_Kuf2WwuDwck"
+          "current_key": "AIzaSyCL6OyvMyitSTtdtEsFwGQMmwIxKZ8pnf0"
         }
       ],
       "services": {

@@ -27,7 +27,7 @@ class Role extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
 
-                Navigator.pushNamed(context, '/user');
+                Navigator.pushNamed(context, '/home');
               },
               child: Text('User'),
             ),

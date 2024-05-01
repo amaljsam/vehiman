@@ -5,6 +5,7 @@ import 'pages/login.dart';
 import 'pages/home.dart';
 import 'pages/admin.dart';
 import 'pages/profile.dart';
+import 'pages/vehiedit.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
     '/home': (context) => HomePage(),
     '/admin': (context) => Admin(),
     '/profile': (context) => UserProfilePage(),
+
+
     },
         );
     }

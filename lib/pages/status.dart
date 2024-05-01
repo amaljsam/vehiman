@@ -75,9 +75,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -87,21 +87,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE1',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 1', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -113,9 +132,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -125,21 +144,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE2',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 2', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -151,9 +189,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -163,21 +201,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE3',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 3', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -189,9 +246,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -201,21 +258,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE4',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 4', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -227,9 +303,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -239,21 +315,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE5',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 5', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -265,9 +360,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -277,21 +372,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE6',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 6', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -303,9 +417,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -315,21 +429,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE 7',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 7', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -341,9 +474,9 @@ class Status extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Status(previousPage: 'home')),
-                ),
+                onPressed: () {
+                  // Add your onPressed functionality here
+                },
                 child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -353,21 +486,40 @@ class Status extends StatelessWidget {
                       end: Alignment.bottomCenter,
                     ),
                   ),
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.directions_car, color: Colors.black, size: 40.0),
-                        SizedBox(width: 8),
-                        Text(
-                          'VEHICLE 8',
-                          style: TextStyle(color: Colors.black),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: Image.asset('lib/pages/assets/car.png'), // This line displays the image of a car
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              'Vehicle 8', // Placeholder for vehicle name, replace it with your data
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),

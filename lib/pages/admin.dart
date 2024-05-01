@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vehiman/pages/damage.dart';
 import 'package:vehiman/pages/manageuser.dart';
-import 'package:vehiman/pages/managevehicles.dart';
 import 'package:vehiman/pages/reserve.dart';
 import 'package:vehiman/pages/status.dart';
-import 'vehicles.dart';
+import 'package:vehiman/pages/vehicle_details.dart';
+import 'package:vehiman/pages/vehicle_lists.dart';
 import 'profile.dart';
-
 
 class Admin extends StatelessWidget {
   @override
@@ -19,7 +18,6 @@ class Admin extends StatelessWidget {
             // Handle menu icon press
           },
         ),
-
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.white,
@@ -36,7 +34,6 @@ class Admin extends StatelessWidget {
             },
           ),
         ],
-
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -63,7 +60,7 @@ class Admin extends StatelessWidget {
               Icons.directions_car,
               'VEHICLES',
                   () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => Vehicles(previousPage: 'admin')),
+                MaterialPageRoute(builder: (context) => VehicleLists(previousPage: 'admin')),
               ),
             ),
 
@@ -104,7 +101,7 @@ class Admin extends StatelessWidget {
               Icons.car_crash,
               'MANAGE VEHICLES',
                   () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => Vehicleman(previousPage: 'admin')),
+                MaterialPageRoute(builder: (context) => VehicleDetails(previousPage: 'admin')),
               ),
             ),
 
